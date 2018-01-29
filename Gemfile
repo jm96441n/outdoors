@@ -32,6 +32,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rubocop', require: false
   gem 'brakeman', :require => false
+  gem 'rspec'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
 end
