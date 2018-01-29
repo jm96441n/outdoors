@@ -13,4 +13,7 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore coverage reports
+coverage
+
 .byebug_history
