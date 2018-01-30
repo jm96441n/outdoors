@@ -41,3 +41,12 @@ in order to run specs faster, etc.
   This means that 100% test coverage must be maintained
 
 #### * New functionality should match up to Trello board ticket
+
+#### * When opening a new PR please add appropriate tags and milestone
+   For now our existing tags are:
+     * `Target: Master` -- This tells us that the merge target for this branch is the master branch (will be useful when we start working on different release branches
+     * `Do Not Merge (RFC)` -- This tells us that this branch is not ready to merge yet, but comments are still requested from others
+     * `Waiting for Comments` -- This is for when your PR is ready to be reviewed and potentially merged. Remove this tag if you are a reviewer and leave comments that need to be addressed.
+     * `Open Comments to Address` -- This is the tag you will add if you are reviewing another persons PR and leave comments for the PR author to address. When adding this remove the `Waiting for Comments` tag as well
+    
+   For now the only milestone we have is MVP launch, more will be added over time as we add additional milestones
