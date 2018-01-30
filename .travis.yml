@@ -1,3 +1,10 @@
 language: ruby
 rvm:
   - 2.4.0
+services:
+  - postgresql
+env:
+  - DB=pgsql
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - RAILS_ENV=test bundle exec rake db:create
