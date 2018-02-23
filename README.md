@@ -37,6 +37,8 @@ in order to run specs faster, etc.
       true
     end
   ```
+
+  Note: we should follow these style guides [ruby](https://github.com/bbatsov/ruby-style-guide) [rails](https://github.com/bbatsov/rails-style-guide)
 #### * All new code must be properly tested
   This means that 100% test coverage must be maintained
 
