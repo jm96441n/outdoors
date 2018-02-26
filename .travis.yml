@@ -1,3 +1,19 @@
 language: ruby
+
 rvm:
   - 2.4.0
+
+env:
+  - DB=pgsql
+
+services:
+  - postgresql
+
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake
+
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database outdoors_test;' -U postgres

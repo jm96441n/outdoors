@@ -30,10 +30,18 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
+
+  # Rubocop to keep code style consistent
   gem 'rubocop', require: false
+
+  # Brakeman to check for security vulnerabilities
   gem 'brakeman', :require => false
+  gem 'rspec'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+
+  # Bullet gem for catching potential n+1 queries
+  gem 'bullet'
 end
 
 group :test do
