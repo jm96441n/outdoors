@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: outdoors_development
+
+test:
+  <<: *default
+  database: outdoors_test
+
+production:
+  <<: *default
+  database: outdoors_developement
