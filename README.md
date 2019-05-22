@@ -13,11 +13,19 @@ So for your initial set up, you're going to want to make sure you're using
 Ruby 2.4.0 (you can specify this using RVM, Rbenv, or Chruby. I prefer Chruby [docs here](https://github.com/postmodern/chruby))
 
 From there your steps are:
-1. Run `bundle install`
-2. Setup your database (`rails db:create` followed by `rails db:migrate`)
-3. Profit.... Well for now, as the application becomes more complex there will be more steps added,
-such as setup for postgis for storing geographic data, setting up parallel testing environments
-in order to run specs faster, etc.
+#### 1) Install Gems With Bundler
+Run `bundle install`
+
+#### 2) Create your local database
+Run `bundle exec rails db:create`
+
+#### 3) Set up Postgis
+If using homebrew run `brew install postgis`, otherwise if you're using the [Postgres.app](http://postgresapp.com/) you're all set.
+Run `bundle exec rake db:gis:setup`
+
+#### 4) Migrate your database
+Run `bundle exec rails db:migrate`
+
 
 ## Contributing
 
